@@ -4,7 +4,7 @@ type HocProps = {
   hocLabel: string;
 };
 
-export function withHoc<T>(WrappedComponent: React.FC<HocProps & React.PropsWithChildren<T>>) {
+export function withHoc<T>(WrappedComponent: React.FC<HocProps & T>) {
   return (props: HocProps & T) => {
     const { hocLabel } = props;
     return (
